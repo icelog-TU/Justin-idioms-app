@@ -1,0 +1,13 @@
+name = "idiom-grader"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# 允許呼叫這支 Worker 的網頁來源（逗號分隔，不要留空白），例如：
+# https://icelog-tu.github.io
+# 部署前務必改成你實際的 GitHub Pages 網址，否則所有網站都能盜用你的額度。
+[vars]
+ALLOWED_ORIGINS = "https://icelog-tu.github.io"
+
+# OPENAI_API_KEY 不要寫在這個檔案裡！
+# 部署後用指令設定（見 worker/README.md）：
+#   npx wrangler secret put OPENAI_API_KEY
